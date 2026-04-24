@@ -1,110 +1,192 @@
 <!DOCTYPE html>
 <html lang="de">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>ERFRISCHUNGSTEMPEL GmbH</title>
-<link rel="stylesheet" href="style.css">
-<link rel="stylesheet" href="hero-gallery.css">
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  <title>ERFRISCHUNGSTEMPEL GmbH | Startseite</title>
+
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css" />
 </head>
 <body>
 
-<nav class="navbar">
-<div class="container">
-<a href="index.html" class="logo"><img src="images/logo.jpeg" alt="ERFRISCHUNGSTEMPEL GmbH" class="logo-image"></a>
-<ul class="nav-links">
-<li><a href="bileşenler.html" data-i18n="nav_cameras">Kameras</a></li>
-<li><a href="cevre-birimleri.html" data-i18n="nav_alarms">Alarm & Sensoren</a></li>
-<li><a href="goliath-systems.html" data-i18n="nav_goliath">GOLIATH Systeme</a></li>
-<li><a href="ajax-alarm.html" data-i18n="nav_ajax">AJAX Alarm</a></li>
-</ul>
-</div>
-</nav>
-
-<header class="hero-alt">
-<div class="container hero-alt-content">
-<div class="hero-alt-text">
-<h1 data-i18n="hero_title">Bringen Sie Ihre Sicherheit auf das <span class="logo-accent">höchste Niveau</span></h1>
-<p data-i18n="hero_subtitle">Hochauflösende IP-Kameras, Rekorder und intelligente Alarmsysteme für Ihr Zuhause und Ihr Unternehmen. Sichern Sie Ihren Seelenfrieden.</p>
-<a href="hazir-sistemler.html" class="cta-button" data-i18n="hero_cta">Pakete ansehen</a>
-</div>
-<div class="hero-alt-image">
-<div class="hero-gallery">
-<img src="images/gemini1.png" alt="Sicherheitskamera 1" class="hero-gallery-slide active">
-<img src="images/gemini2.png" alt="Sicherheitskamera 2" class="hero-gallery-slide">
-<img src="images/gemini3.png" alt="Sicherheitskamera 3" class="hero-gallery-slide">
-<img src="images/gemini4.png" alt="Sicherheitskamera 4" class="hero-gallery-slide">
-<img src="images/gemini5.png" alt="Sicherheitskamera 5" class="hero-gallery-slide">
-</div>
-</div>
-</div>
-</header>
-
-<section class="categories">
-<h2 class="section-title" data-i18n="section_solutions">Sicherheitslösungen</h2>
-<div class="container grid-container">
-
-</a>
-<a href="liste.html?kategori=motherboard" class="category-card-link">
-<div class="category-card">
-<i class="fas fa-video card-icon"></i> <h2 data-i18n="cat_cameras_title">Kameras</h2>
-<p data-i18n="cat_cameras_desc">Alle Modelle von IP-, Dome- und Bullet-Kameras.</p>
-</div>
-</a>
-<a href="liste.html?kategori=alarm" class="category-card-link">
-<div class="category-card">
-<i class="fas fa-bell card-icon"></i> <h2 data-i18n="cat_alarms_title">Alarm & Sensoren</h2>
-<p data-i18n="cat_alarms_desc">Drahtlose Alarme, Sensoren und Sicherheitszubehör.</p>
-</div>
-</a>
-<a href="goliath-systems.html" class="category-card-link">
-<div class="category-card">
-<i class="fas fa-shield-alt card-icon"></i> <h2 data-i18n="cat_goliath_title">GOLIATH Systeme</h2>
-<p data-i18n="cat_goliath_desc">Hochwertige IP-Kameras und Türsprechanlagen mit deutscher Technologie.</p>
-</div>
-</a>
-<a href="ajax-alarm.html" class="category-card-link">
-<div class="category-card">
-<i class="fas fa-exclamation-triangle card-icon"></i> <h2 data-i18n="cat_ajax_title">AJAX Alarmsysteme</h2>
-<p data-i18n="cat_ajax_desc">Professionelle Sicherheitslösungen mit drahtloser Alarmtechnologie.</p>
-</div>
-</a>
-</div>
-</section>
-
-<footer class="footer">
+  <nav class="navbar navbar-expand-lg fixed-top custom-navbar">
     <div class="container">
-        <p><strong>ERFRISCHUNGSTEMPEL GmbH</strong></p>
-        <p>Hügel Str. 26, 45968 Gladbeck</p>
-        <p>Steuernummer: 201/5957/6126</p>
-        <br>
-        <p>+49 (0) 1575 7881120</p>
-        <p>info@erfrischungstempel.de</p>
-        <br>
-        <p class="copyright">&copy; 2025 ERFRISCHUNGSTEMPEL GmbH. <span data-i18n="footer_rights">Alle Rechte vorbehalten.</span></p>
+      <a class="navbar-brand brand-logo-wrapper" href="index.html">
+        <img src="images/logo.png" alt="ERFRISCHUNGSTEMPEL GmbH Logo" class="brand-logo">
+      </a>
+
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#menu">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+
+      <div class="collapse navbar-collapse" id="menu">
+        <ul class="navbar-nav ms-auto gap-lg-3">
+          <li class="nav-item">
+            <a class="nav-link active" href="index.html">Startseite</a>
+          </li>
+
+          <li class="nav-item">
+            <a class="nav-link" href="about.html">Über uns</a>
+          </li>
+
+          <li class="nav-item">
+            <a class="nav-link" href="contact.html">Kontakt</a>
+          </li>
+        </ul>
+      </div>
     </div>
-</footer>
+  </nav>
 
-<script src="translations.js"></script>
-<script src="data.js"></script>
-<script src="cart.js"></script>
-<script>
-const gallerySlides = document.querySelectorAll('.hero-gallery-slide');
-let galleryIndex = 0;
+  <header class="hero-section">
+    <div class="container">
+      <div class="row align-items-center min-vh-100 pt-5 hero-row">
+        <div class="col-lg-6 hero-text-column">
+          <span class="hero-badge">Erfrischende Lösungen für Unternehmen</span>
 
-function showGallerySlide(index) {
-    gallerySlides.forEach((slide, i) => {
-        slide.classList.toggle('active', i === index);
-    });
-}
+          <h1 class="hero-title">
+            Moderne<br>
+            Erfrischungs&shy;konzepte<br>
+            für Ihren<br>
+            Arbeitsplatz.
+          </h1>
 
-if (gallerySlides.length > 0) {
-    setInterval(() => {
-        galleryIndex = (galleryIndex + 1) % gallerySlides.length;
-        showGallerySlide(galleryIndex);
-    }, 3000);
-}
-</script>
+          <p class="hero-text">
+            Die ERFRISCHUNGSTEMPEL GmbH bietet zuverlässige, hochwertige und flexible
+            Lösungen rund um Erfrischung, Versorgung und Service für Unternehmen und Einrichtungen.
+          </p>
+
+          <div class="d-flex flex-wrap gap-3">
+            <a href="contact.html" class="btn btn-primary custom-btn">Kontakt aufnehmen</a>
+            <a href="about.html" class="btn btn-outline-light custom-btn-outline">Mehr erfahren</a>
+          </div>
+        </div>
+
+        <div class="col-lg-6 mt-5 mt-lg-0 hero-slider-column">
+          <div class="slider-card">
+            <img id="sliderImage" src="images/slide1.jpg" alt="ERFRISCHUNGSTEMPEL Bild" class="slider-image">
+
+            <div class="slider-dots">
+              <span class="dot active"></span>
+              <span class="dot"></span>
+              <span class="dot"></span>
+              <span class="dot"></span>
+              <span class="dot"></span>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </header>
+
+  <main>
+    <section class="section-padding">
+      <div class="container">
+        <div class="section-heading text-center">
+          <span>Unsere Leistungen</span>
+          <h2>Zuverlässiger Service mit einem klaren Anspruch</h2>
+          <p>
+            Wir verbinden Qualität, persönliche Betreuung und praktische Lösungen für den täglichen Bedarf.
+          </p>
+        </div>
+
+        <div class="row g-4">
+          <div class="col-md-4">
+            <div class="feature-card">
+              <div class="feature-icon">🥤</div>
+              <h3>Erfrischung</h3>
+              <p>
+                Individuelle Versorgungslösungen für Büros, Betriebe und Einrichtungen.
+              </p>
+            </div>
+          </div>
+
+          <div class="col-md-4">
+            <div class="feature-card">
+              <div class="feature-icon">🚚</div>
+              <h3>Zuverlässigkeit</h3>
+              <p>
+                Pünktliche Betreuung, klare Abläufe und ein Service, auf den Sie sich verlassen können.
+              </p>
+            </div>
+          </div>
+
+          <div class="col-md-4">
+            <div class="feature-card">
+              <div class="feature-icon">🤝</div>
+              <h3>Persönlicher Kontakt</h3>
+              <p>
+                Direkte Kommunikation und flexible Unterstützung passend zu Ihren Anforderungen.
+              </p>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+    <section class="stats-section">
+      <div class="container">
+        <div class="row g-4 text-center">
+          <div class="col-md-3 col-6">
+            <h3>100%</h3>
+            <p>Serviceorientiert</p>
+          </div>
+
+          <div class="col-md-3 col-6">
+            <h3>Flexibel</h3>
+            <p>Individuelle Lösungen</p>
+          </div>
+
+          <div class="col-md-3 col-6">
+            <h3>Direkt</h3>
+            <p>Persönliche Betreuung</p>
+          </div>
+
+          <div class="col-md-3 col-6">
+            <h3>Lokal</h3>
+            <p>Standort Gladbeck</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section-padding contact-preview-section">
+      <div class="container">
+        <div class="contact-preview-card">
+          <div>
+            <span class="mini-title">Kontakt</span>
+            <h2>Sie möchten mehr erfahren?</h2>
+            <p>
+              Nehmen Sie Kontakt mit uns auf. Wir beraten Sie gerne persönlich.
+            </p>
+          </div>
+
+          <div class="contact-preview-info">
+            <p><strong>Telefon:</strong> +49 (0) 1575 7881120</p>
+            <p><strong>E-Mail:</strong> info@erfrischungstempel.de</p>
+            <a href="contact.html" class="btn btn-primary custom-btn">Zur Kontaktseite</a>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <div class="container d-md-flex justify-content-between align-items-center">
+      <p class="mb-2 mb-md-0">© 2026 ERFRISCHUNGSTEMPEL GmbH. Alle Rechte vorbehalten.</p>
+
+      <div>
+        <a href="index.html">Startseite</a>
+        <a href="about.html">Über uns</a>
+        <a href="contact.html">Kontakt</a>
+      </div>
+    </div>
+  </footer>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+  <script src="js/script.js"></script>
 </body>
 </html>
