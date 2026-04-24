@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title data-i18n="nav_cameras">Kameras</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+</head>
+<body>
+
+    <nav class="navbar">
+        <div class="container">
+            <a href="index.html" class="logo"><img src="images/logo.jpeg" alt="ERFRISCHUNGSTEMPEL GmbH" class="logo-image"></a>
+            <ul class="nav-links">
+               
+                <li><a href="bileşenler.html" class="active" data-i18n="nav_cameras">Kameras</a></li>
+                <li><a href="cevre-birimleri.html" data-i18n="nav_alarms">Alarm & Sensoren</a></li>
+                <li><a href="goliath-systems.html" data-i18n="nav_goliath">GOLIATH Systeme</a></li>
+                <li><a href="ajax-alarm.html" data-i18n="nav_ajax">AJAX Alarm</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <main class="container page-content">
+        <h1 id="kategori-basligi" data-i18n="nav_cameras">Kameras</h1>
+        <p class="page-intro" id="kategori-aciklama" data-i18n="cameras_intro">Übernehmen Sie die Kontrolle über Ihre Sicherheit mit fortschrittlichen IP- und Analog-Kamerasystemen.</p>
+        
+        <section class="products-section">
+            <div id="product-list-container" class="grid-container">
+                <!-- Produkte werden von liste.js geladen -->
+                <div class="loading" data-i18n="loading">Laden...</div>
+            </div>
+        </section>
+
+    </main>
+
+    <footer class="footer">
+        <div class="container">
+            <p><strong>ERFRISCHUNGSTEMPEL GmbH</strong></p>
+            <p>Hügel Str. 26, 45968 Gladbeck</p>
+            <p>Steuernummer: 201/5957/6126</p>
+            <br>
+            <p>+49 (0) 1575 7881120</p>
+            <p>info@erfrischungstempel.de</p>
+            <br>
+            <p class="copyright">&copy; 2025 ERFRISCHUNGSTEMPEL GmbH. <span data-i18n="footer_rights">Alle Rechte vorbehalten.</span></p>
+        </div>
+    </footer>
+
+    <script src="translations.js"></script>
+
+    <script src="data.js"></script>
+    <script src="cart.js"></script> 
+    <script src="liste.js"></script> 
+    </body>
+</html>
