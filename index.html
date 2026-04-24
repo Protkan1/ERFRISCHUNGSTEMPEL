@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>ERFRISCHUNGSTEMPEL GmbH</title>
+<link rel="stylesheet" href="style.css">
+<link rel="stylesheet" href="hero-gallery.css">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+</head>
+<body>
+
+<nav class="navbar">
+<div class="container">
+<a href="index.html" class="logo"><img src="images/logo.jpeg" alt="ERFRISCHUNGSTEMPEL GmbH" class="logo-image"></a>
+<ul class="nav-links">
+<li><a href="bileşenler.html" data-i18n="nav_cameras">Kameras</a></li>
+<li><a href="cevre-birimleri.html" data-i18n="nav_alarms">Alarm & Sensoren</a></li>
+<li><a href="goliath-systems.html" data-i18n="nav_goliath">GOLIATH Systeme</a></li>
+<li><a href="ajax-alarm.html" data-i18n="nav_ajax">AJAX Alarm</a></li>
+</ul>
+</div>
+</nav>
+
+<header class="hero-alt">
+<div class="container hero-alt-content">
+<div class="hero-alt-text">
+<h1 data-i18n="hero_title">Bringen Sie Ihre Sicherheit auf das <span class="logo-accent">höchste Niveau</span></h1>
+<p data-i18n="hero_subtitle">Hochauflösende IP-Kameras, Rekorder und intelligente Alarmsysteme für Ihr Zuhause und Ihr Unternehmen. Sichern Sie Ihren Seelenfrieden.</p>
+<a href="hazir-sistemler.html" class="cta-button" data-i18n="hero_cta">Pakete ansehen</a>
+</div>
+<div class="hero-alt-image">
+<div class="hero-gallery">
+<img src="images/gemini1.png" alt="Sicherheitskamera 1" class="hero-gallery-slide active">
+<img src="images/gemini2.png" alt="Sicherheitskamera 2" class="hero-gallery-slide">
+<img src="images/gemini3.png" alt="Sicherheitskamera 3" class="hero-gallery-slide">
+<img src="images/gemini4.png" alt="Sicherheitskamera 4" class="hero-gallery-slide">
+<img src="images/gemini5.png" alt="Sicherheitskamera 5" class="hero-gallery-slide">
+</div>
+</div>
+</div>
+</header>
+
+<section class="categories">
+<h2 class="section-title" data-i18n="section_solutions">Sicherheitslösungen</h2>
+<div class="container grid-container">
+
+</a>
+<a href="liste.html?kategori=motherboard" class="category-card-link">
+<div class="category-card">
+<i class="fas fa-video card-icon"></i> <h2 data-i18n="cat_cameras_title">Kameras</h2>
+<p data-i18n="cat_cameras_desc">Alle Modelle von IP-, Dome- und Bullet-Kameras.</p>
+</div>
+</a>
+<a href="liste.html?kategori=alarm" class="category-card-link">
+<div class="category-card">
+<i class="fas fa-bell card-icon"></i> <h2 data-i18n="cat_alarms_title">Alarm & Sensoren</h2>
+<p data-i18n="cat_alarms_desc">Drahtlose Alarme, Sensoren und Sicherheitszubehör.</p>
+</div>
+</a>
+<a href="goliath-systems.html" class="category-card-link">
+<div class="category-card">
+<i class="fas fa-shield-alt card-icon"></i> <h2 data-i18n="cat_goliath_title">GOLIATH Systeme</h2>
+<p data-i18n="cat_goliath_desc">Hochwertige IP-Kameras und Türsprechanlagen mit deutscher Technologie.</p>
+</div>
+</a>
+<a href="ajax-alarm.html" class="category-card-link">
+<div class="category-card">
+<i class="fas fa-exclamation-triangle card-icon"></i> <h2 data-i18n="cat_ajax_title">AJAX Alarmsysteme</h2>
+<p data-i18n="cat_ajax_desc">Professionelle Sicherheitslösungen mit drahtloser Alarmtechnologie.</p>
+</div>
+</a>
+</div>
+</section>
+
+<footer class="footer">
+    <div class="container">
+        <p><strong>ERFRISCHUNGSTEMPEL GmbH</strong></p>
+        <p>Hügel Str. 26, 45968 Gladbeck</p>
+        <p>Steuernummer: 201/5957/6126</p>
+        <br>
+        <p>+49 (0) 1575 7881120</p>
+        <p>info@erfrischungstempel.de</p>
+        <br>
+        <p class="copyright">&copy; 2025 ERFRISCHUNGSTEMPEL GmbH. <span data-i18n="footer_rights">Alle Rechte vorbehalten.</span></p>
+    </div>
+</footer>
+
+<script src="translations.js"></script>
+<script src="data.js"></script>
+<script src="cart.js"></script>
+<script>
+const gallerySlides = document.querySelectorAll('.hero-gallery-slide');
+let galleryIndex = 0;
+
+function showGallerySlide(index) {
+    gallerySlides.forEach((slide, i) => {
+        slide.classList.toggle('active', i === index);
+    });
+}
+
+if (gallerySlides.length > 0) {
+    setInterval(() => {
+        galleryIndex = (galleryIndex + 1) % gallerySlides.length;
+        showGallerySlide(galleryIndex);
+    }, 3000);
+}
+</script>
+</body>
+</html>

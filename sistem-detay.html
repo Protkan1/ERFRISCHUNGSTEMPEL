@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Paketdetails - ERFRISCHUNGSTEMPEL GmbH</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+</head>
+<body>
+
+    <nav class="navbar">
+        <div class="container">
+            <a href="index.html" class="logo"><img src="images/logo.jpeg" alt="ERFRISCHUNGSTEMPEL GmbH" class="logo-image"></a>
+            <ul class="nav-links">
+               
+                <li><a href="bileşenler.html">Kameras</a></li>
+                <li><a href="cevre-birimleri.html">Alarm & Sensoren</a></li>
+                <li><a href="goliath-systems.html">GOLIATH Systeme</a></li>
+                <li><a href="ajax-alarm.html">AJAX Alarm</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <main class="container page-content">
+        
+        <div id="detail-loading"> <h1 id="detail-title-placeholder">Paket wird geladen...</h1> </div>
+
+        <div class="detail-container" id="detail-main-content">
+            
+            <div class="detail-gallery"> <img src="" alt="" id="detail-image"> </div>
+
+            <div class="detail-info">
+                <h1 id="detail-title"></h1>
+                <p class="detail-description" id="detail-description"> </p>
+
+                <div class="detail-tabs">
+                    <button class="tab-link active" data-tab="tab-specs"><i class="fas fa-cogs"></i> Komponenten & Anpassung</button>
+                    <button class="tab-link" data-tab="tab-performance"><i class="fas fa-tachometer-alt"></i> Leistung & Aufnahmezeit</button>
+                    <button class="tab-link" data-tab="tab-details"><i class="fas fa-info-circle"></i> Technische Details</button>
+                </div>
+
+                <div id="tab-specs" class="tab-content active">
+                    <div class="component-selection" style="border: none; padding: 0;">
+                        <div class="component-row" id="row-cpu"> 
+                            <img src="images/icon-dvr.png" alt="Rekorder" class="component-icon-img" id="img-cpu"> 
+                            <div class="component-details"> 
+                                <span class="component-title">Rekorder (DVR / NVR)</span> 
+                                <span class="selected-item" id="selected-cpu">...</span> 
+                            </div> 
+                            <button class="btn-select" data-type="cpu">Ändern</button> 
+                        </div>
+                        
+                        <div class="component-row" id="row-motherboard"> 
+                            <img src="images/icon-hdd.png" alt="Speicher" class="component-icon-img" id="img-motherboard"> 
+                            <div class="component-details"> 
+                                <span class="component-title">Festplatte (Speicher)</span> 
+                                <span class="selected-item" id="selected-motherboard">...</span> 
+                            </div> 
+                            <button class="btn-select" data-type="motherboard">Ändern</button> 
+                        </div>
+                        
+                        <div class="component-row" id="row-ram"> 
+                            <img src="images/icon-camera.png" alt="Kamera" class="component-icon-img" id="img-ram"> 
+                            <div class="component-details"> 
+                                <span class="component-title">Kamera Anzahl und Modell</span> 
+                                <span class="selected-item" id="selected-ram">...</span> 
+                            </div> 
+                            <button class="btn-select" data-type="ram">Ändern / Hinzufügen</button> 
+                        </div>
+                        
+                        <div class="component-row" id="row-psu" style="display: none;"> 
+                            <img src="images/default-psu.png" alt="PSU" class="component-icon-img" id="img-psu"> 
+                            <div class="component-details"> 
+                                <span class="component-title">Altes Netzteil</span> 
+                                <span class="selected-item" id="selected-psu">...</span> 
+                            </div> 
+                            <button class="btn-select" data-type="psu">Ändern</button> 
+                        </div>
+                        <div class="component-row" id="row-kasa" style="display: none;"> 
+                            <img src="images/default-kasa.png" alt="Kasa" class="component-icon-img" id="img-kasa"> 
+                            <div class="component-details"> 
+                                <span class="component-title">Altes Gehäuse</span> 
+                                <span class="selected-item" id="selected-kasa">...</span> 
+                            </div> 
+                            <button class="btn-select" data-type="kasa">Ändern</button> 
+                        </div>
+                        </div>
+                </div>
+                
+                <div id="tab-performance" class="tab-content"> 
+                    <h3 class="tab-subheader">Geschätzte Aufnahmezeit und Auflösungsleistung</h3>
+                    <ul class="detail-perf-list" id="detail-games-list"> </ul> 
+                </div>
+                <div id="tab-details" class="tab-content"> 
+                    <h3 class="tab-subheader">Technische Protokolle und Temperaturmanagement</h3>
+                    <ul class="detail-perf-list" id="detail-benchmarks-list"> </ul> 
+                </div>
+
+                <div class="detail-purchase-box">
+                    <span class="detail-price" id="detail-price">0,00 €</span>
+                </div>
+            </div>
+
+        </div>
+    </main>
+
+    <div id="product-modal" class="modal-overlay">
+        <div class="modal-content">
+            <button class="close-modal" id="close-modal-btn">&times;</button>
+            <h3 id="modal-title">Produkt auswählen/ändern</h3>
+            <div id="modal-product-list"> </div>
+        </div>
+    </div>
+
+    <footer class="footer">
+        <div class="container">
+            <p><strong>ERFRISCHUNGSTEMPEL GmbH</strong></p>
+            <p>Hügel Str. 26, 45968 Gladbeck</p>
+            <p>Steuernummer: 201/5957/6126</p>
+            <br>
+            <p>+49 (0) 1575 7881120</p>
+            <p>info@erfrischungstempel.de</p>
+            <br>
+            <p class="copyright">&copy; 2025 ERFRISCHUNGSTEMPEL GmbH. Alle Rechte vorbehalten.</p>
+        </div>
+    </footer>
+
+    <script src="data.js"></script>
+    <script src="cart.js"></script> 
+    <script src="detay.js"></script> 
+</body>
+</html>

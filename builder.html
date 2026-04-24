@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="de">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sicherheitssystem Konfigurator</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+</head>
+
+<body>
+
+    <nav class="navbar">
+        <div class="container">
+            <a href="index.html" class="logo"><img src="images/logo.jpeg" alt="ERFRISCHUNGSTEMPEL GmbH" class="logo-image"></a>
+            <ul class="nav-links">
+                <li><a href="hazir-sistemler.html">Sicherheitspakete</a></li>
+                <li><a href="bileşenler.html">Kameras</a></li>
+                <li><a href="cevre-birimleri.html">Alarm & Zubehör</a></li>
+                <li><a href="goliath-systems.html">GOLIATH Systeme</a></li>
+                <li><a href="ajax-alarm.html">AJAX Alarm</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <main class="container builder-page">
+        <h1>Sicherheitssystem Konfigurator</h1>
+        <p class="builder-intro">Passen Sie Ihr System ab dem Rekorder (DVR/NVR) an. Inkompatible Produkte werden automatisch gefiltert.</p>
+
+        <div class="builder-container">
+            <div class="component-selection">
+                <h3>Hauptkomponenten</h3>
+
+                <div class="component-row" id="row-cpu">
+                    <img src="images/default-dvr.png" alt="Rekorder" class="component-icon-img" id="img-cpu">
+                    <div class="component-details">
+                        <span class="component-title">Rekorder (DVR / NVR)</span>
+                        <span class="selected-item" id="selected-cpu">Noch nicht ausgewählt (Erforderlich)</span>
+                    </div>
+                    <button class="btn-select" data-type="cpu">Auswählen</button>
+                </div>
+
+                <div class="component-row" id="row-motherboard">
+                    <img src="images/default-hdd.png" alt="Festplatte" class="component-icon-img" id="img-motherboard">
+                    <div class="component-details">
+                        <span class="component-title">Festplatte (Speicher)</span>
+                        <span class="selected-item" id="selected-motherboard">Noch nicht ausgewählt (Erforderlich)</span>
+                    </div>
+                    <button class="btn-select" data-type="motherboard" disabled>Auswählen</button>
+                </div>
+
+                <div class="component-row" id="row-ram">
+                    <img src="images/default-kamera.png" alt="Kamera" class="component-icon-img" id="img-ram">
+                    <div class="component-details">
+                        <span class="component-title">Kameras (Anzahl und Modell)</span>
+                        <span class="selected-item" id="selected-ram">Noch nicht ausgewählt (Min. 1 Stück)</span>
+                    </div>
+                    <button class="btn-select" data-type="ram" disabled>Auswählen</button>
+                </div>
+
+
+            </div>
+            <div class="summary">
+                <h2>Systemübersicht</h2>
+                <div id="summary-list">
+                    <p class="summary-placeholder">Noch keine Teile ausgewählt.</p>
+                </div>
+                <div class="total-price-container"> <span>Gesamtpreis:</span> <span id="total-price">0 €</span> </div>
+                <button class="btn-add-to-cart" disabled>In den Warenkorb</button>
+            </div>
+        </div>
+    </main>
+
+    <div id="product-modal" class="modal-overlay">
+        <div class="modal-content">
+            <button class="close-modal" id="close-modal-btn">&times;</button>
+            <h3 id="modal-title">Produkt auswählen</h3>
+            <div id="modal-product-list"> </div>
+        </div>
+    </div>
+
+    <footer class="footer">
+        <div class="container">
+            <p><strong>ERFRISCHUNGSTEMPEL GmbH</strong></p>
+            <p>Hügel Str. 26, 45968 Gladbeck</p>
+            <p>Steuernummer: 201/5957/6126</p>
+            <br>
+            <p>+49 (0) 1575 7881120</p>
+            <p>info@erfrischungstempel.de</p>
+            <br>
+            <p class="copyright">&copy; 2025 ERFRISCHUNGSTEMPEL GmbH. Alle Rechte vorbehalten.</p>
+        </div>
+    </footer>
+
+    <script src="data.js"></script>
+    <script src="cart.js"></script>
+    <script src="builder.js"></script>
+</body>
+
+</html>

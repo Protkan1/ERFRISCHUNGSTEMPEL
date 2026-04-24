@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="de">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Zahlung</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+</head>
+
+<body>
+
+    <nav class="navbar">
+        <div class="container">
+            <a href="index.html" class="logo"><img src="images/logo.jpeg" alt="ERFRISCHUNGSTEMPEL GmbH" class="logo-image"></a>
+            <ul class="nav-links">
+              
+                <li><a href="bileşenler.html">Kameras</a></li>
+                <li><a href="cevre-birimleri.html">Alarm & Zubehör</a></li>
+                <li><a href="goliath-systems.html">GOLIATH Systeme</a></li>
+                <li><a href="ajax-alarm.html">AJAX Alarm</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <main class="container page-content">
+        <h1>Zahlungs- und Lieferinformationen</h1>
+
+        <div class="order-success-message" id="order-success" style="display: none;">
+            <i class="fas fa-check-circle fa-3x"></i>
+            <h2>Ihre Bestellung wurde erfolgreich entgegengenommen!</h2>
+            <p>Ihre Bestellübersicht und Details (falls vorhanden) wurden an Ihre E-Mail-Adresse gesendet.</p>
+            <p>Sie werden in wenigen Sekunden zur Startseite weitergeleitet...</p>
+            <a href="index.html" class="cta-button">Zur Startseite</a>
+        </div>
+
+        <div class="checkout-container" id="checkout-content">
+
+            <div class="checkout-form">
+                <h2>Lieferadresse</h2>
+                <form id="delivery-form">
+                    <div class="form-group">
+                        <label for="name">Name Vorname:</label>
+                        <input type="text" id="name" name="name" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="email">E-Mail:</label>
+                        <input type="email" id="email" name="email" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="phone">Telefon:</label>
+                        <input type="tel" id="phone" name="phone">
+                    </div>
+                    <div class="form-group">
+                        <label for="address">Adresse:</label>
+                        <textarea id="address" name="address" rows="3" required></textarea>
+                    </div>
+                    <div class="form-group">
+                        <label for="city">Stadt:</label>
+                        <input type="text" id="city" name="city" required>
+                    </div>
+
+                    <h2 style="margin-top: 30px;">Kreditkarteninformationen</h2>
+                    <div class="form-group">
+                        <label for="card-name">Name auf der Karte:</label>
+                        <input type="text" id="card-name" name="card-name" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="card-number">Kartennummer:</label>
+                        <input type="text" id="card-number" name="card-number" pattern="\d{16}"
+                            placeholder="XXXX XXXX XXXX XXXX" required>
+                    </div>
+                    <div class="form-group form-row">
+                        <div class="form-half">
+                            <label for="expiry-date">Gültig bis:</label>
+                            <input type="text" id="expiry-date" name="expiry-date" pattern="\d{2}/\d{2}"
+                                placeholder="MM/JJ" required>
+                        </div>
+                        <div class="form-half">
+                            <label for="cvv">CVV:</label>
+                            <input type="text" id="cvv" name="cvv" pattern="\d{3,4}" placeholder="XXX" required>
+                        </div>
+                    </div>
+                </form>
+            </div>
+
+            <div class="checkout-summary">
+                <h2>Zusammenfassung Ihrer Bestellung</h2>
+                <div class="checkout-items" id="checkout-items-list">
+                    <p>Warenkorb wird geladen...</p>
+                </div>
+                <div class="summary-line total-line">
+                    <span>Gesamtbetrag:</span>
+                    <span id="checkout-total">0,00 €</span>
+                </div>
+                <button class="btn-checkout btn-complete-order" id="complete-order-button">
+                    <i class="fas fa-lock"></i> Sichere Bestellung abschließen
+                </button>
+            </div>
+
+        </div>
+
+    </main>
+
+    <footer class="footer">
+        <div class="container">
+            <p><strong>ERFRISCHUNGSTEMPEL GmbH</strong></p>
+            <p>Hügel Str. 26, 45968 Gladbeck</p>
+            <p>Steuernummer: 201/5957/6126</p>
+            <br>
+            <p>+49 (0) 1575 7881120</p>
+            <p>info@erfrischungstempel.de</p>
+            <br>
+            <p class="copyright">&copy; 2025 ERFRISCHUNGSTEMPEL GmbH. Alle Rechte vorbehalten.</p>
+        </div>
+    </footer>
+
+    <script src="data.js"></script>
+    <script src="cart.js"></script>
+    <script src="odeme.js"></script>
+</body>
+
+</html>

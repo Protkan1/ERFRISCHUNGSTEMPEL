@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="de">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title data-i18n="nav_goliath">GOLIATH Systeme</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+</head>
+
+<body>
+
+    <nav class="navbar">
+        <div class="container">
+            <a href="index.html" class="logo"><img src="images/logo.jpeg" alt="ERFRISCHUNGSTEMPEL GmbH" class="logo-image"></a>
+            <ul class="nav-links">
+                
+                <li><a href="bileşenler.html" data-i18n="nav_cameras">Kameras</a></li>
+                <li><a href="cevre-birimleri.html" data-i18n="nav_alarms">Alarm & Sensoren</a></li>
+                <li><a href="goliath-systems.html" class="active" data-i18n="nav_goliath">GOLIATH Systeme</a></li>
+                <li><a href="ajax-alarm.html" data-i18n="nav_ajax">AJAX Alarm</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <main class="container page-content">
+        <h1 data-i18n="goliath_title">GOLIATH Sicherheitssysteme</h1>
+        <p class="page-intro" data-i18n="goliath_intro">Hochwertige IP-Kameras, Türsprechanlagen und Sicherheitslösungen mit deutscher Technologie.</p>
+
+        <section class="products-section">
+            <h2 data-i18n="goliath_sets_title">GOLIATH IP Kamera Sets</h2>
+            <p class="category-desc" data-i18n="goliath_sets_desc">Hochauflösende IP-Kameras, einfache Installation mit PoE-Technologie</p>
+            <div class="grid-container" id="goliath-cameras-list"></div>
+        </section>
+
+        <section class="products-section">
+            <h2 data-i18n="goliath_single_title">GOLIATH Einzelkameras</h2>
+            <p class="category-desc" data-i18n="goliath_single_desc">Hochwertige IP-Kameras für den individuellen Einsatz</p>
+            <div class="grid-container" id="goliath-single-cameras-list"></div>
+        </section>
+
+        <section class="products-section">
+            <h2>GOLIATH Türsprechanlagen</h2>
+            <p class="category-desc">Professionelle Videosprechanlagen mit deutscher Technologie</p>
+            <div class="grid-container" id="goliath-doorbells-list"></div>
+        </section>
+
+    </main>
+
+    <footer class="footer">
+        <div class="container">
+            <p><strong>ERFRISCHUNGSTEMPEL GmbH</strong></p>
+            <p>Hügel Str. 26, 45968 Gladbeck</p>
+            <p>Steuernummer: 201/5957/6126</p>
+            <br>
+            <p>+49 (0) 1575 7881120</p>
+            <p>info@erfrischungstempel.de</p>
+            <br>
+            <p class="copyright">&copy; 2025 ERFRISCHUNGSTEMPEL GmbH. <span data-i18n="footer_rights">Alle Rechte vorbehalten.</span></p>
+        </div>
+    </footer>
+
+    <script src="translations.js"></script>
+
+    <script src="data.js"></script>
+    <script src="cart.js"></script>
+    <script src="goliath.js"></script>
+
+</body>
+
+</html>
